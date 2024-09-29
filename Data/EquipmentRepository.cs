@@ -12,6 +12,17 @@ namespace forestTrack.Data
         public void Add(EquipmentModel equipment)
         {
 
+            //Verifico equipment_model_id
+
+             var ExistEquipment_Model_id = _context.Equipments.Any(item => item.Id == equipment.EquipmentModelId);
+
+             if(!ExistEquipment_Model_id)
+             {
+                throw new InvalidOperationException("Equipment id doens't exist!");
+             }
+             
+             //verifica nome existente ou campo vazio
+
             if (string.IsNullOrWhiteSpace(equipment.Name))
             {
                 throw new ArgumentException("Name cannot be null or empty.", nameof(equipment.Name));
@@ -44,7 +55,7 @@ namespace forestTrack.Data
             }
 
             _context.Equipments.Remove(equipment); 
-            _context.SaveChanges();
+            _context.SaveChanges(); 
         }
     }
 }

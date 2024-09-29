@@ -23,8 +23,6 @@ namespace forestTrack.Controllers
         [HttpPost]
         public IActionResult Add(EquipmentViewModel equipmentView)
         {
-        
-
             var equipment = new EquipmentModel
             {
                 
@@ -37,13 +35,15 @@ namespace forestTrack.Controllers
         }
 
 
-        // get todos os Equipamentos//
+       
         [HttpGet]
         public IActionResult Get()
         {
             var equipments = _equipmentRepository.Get();
             return Ok(equipments);
         }
+
+
         ////// delete ///////
           [HttpDelete("{id}")]
         public IActionResult RemoveEquipment(int id)
