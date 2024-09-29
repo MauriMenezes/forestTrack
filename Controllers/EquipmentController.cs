@@ -11,11 +11,20 @@ namespace forestTrack.Controllers
     [Route("api/[controller]")]
     public class EquipmentController : ControllerBase
     {        
+
+        private readonly IequipmentRepository _equipmentRepository;
+
+        public EquipmentController(IequipmentRepository equipmentRepository)
+        {
+            _equipmentRepository = equipmentRepository ?? throw new ArgumentNullException();
+        }
+
         [HttpGet]
          
-         public ActionResult<List<EquipmentModel>> GetAllEquipments()
+         public IActionResult Get()
          {
-            return Ok();
+            var equipments = _equipmentRepository.Get();
+            return Ok(equipments);
          }
     }
 }
