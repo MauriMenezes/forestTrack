@@ -1,4 +1,6 @@
 using forestTrack.Data;
+using forestTrack.Data.Interface;
+using forestTrack.Data.repository;
 using forestTrack.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +12,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
 builder.Services.AddTransient<IequipmentRepository,EquipmentRepository>();
+builder.Services.AddTransient<IEquipmentStateRepository, EquipmentStateRepository>(); 
+
+builder.Services.AddTransient<IEquipmentModelRepository, EquipmentModelRepository>(); 
+
+
+
 
 var app = builder.Build();
 

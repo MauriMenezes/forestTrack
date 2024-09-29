@@ -9,6 +9,8 @@ namespace forestTrack.Data
     public class EquipmentRepository : IequipmentRepository
     {
         private readonly ChallengeDBContext _context = new ChallengeDBContext();
+
+        // ADD equipment
         public void Add(Equipment equipment)
         {
 
@@ -39,12 +41,13 @@ namespace forestTrack.Data
             _context.SaveChanges();
         }
 
-
+        // List equipment
         public List<Equipment> Get()
         {
             return _context.Equipments.ToList();
         }
 
+        // remove Equipmet
          public void Remove(int equipmentId)
        {
             var equipment = _context.Equipments.Find(equipmentId); 
