@@ -23,7 +23,7 @@ namespace forestTrack.Controllers
         [HttpPost]
         public IActionResult Add(EquipmentViewModel equipmentView)
         {
-            var equipment = new EquipmentModel
+            var equipment = new Equipment
             {
                 
                 EquipmentModelId = equipmentView.Equipment_model_id,

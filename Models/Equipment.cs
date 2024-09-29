@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace forestTrack.Models
 {
     [Table("equipment")]
-    public class EquipmentModel
+    public class Equipment
     {
         [Key]
         [Column("id")]  
@@ -20,9 +20,9 @@ namespace forestTrack.Models
         [Column("name")]  
         public string? Name { get; set; }
 
-        public EquipmentModel() { }
+        public Equipment() { }
 
-        public EquipmentModel(int Id, int EquipmentModelId, string Name)
+        public Equipment(int Id, int EquipmentModelId, string Name)
         {
             this.Id = Id;
             this.EquipmentModelId = EquipmentModelId;

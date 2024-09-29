@@ -10,7 +10,7 @@ namespace forestTrack.Data
 {
     public class ChallengeDBContext : DbContext
     {
-        public DbSet<EquipmentModel> Equipments { get; set; }
+        public DbSet<Equipment> Equipments { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer(

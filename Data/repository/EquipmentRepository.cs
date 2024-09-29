@@ -9,7 +9,7 @@ namespace forestTrack.Data
     public class EquipmentRepository : IequipmentRepository
     {
         private readonly ChallengeDBContext _context = new ChallengeDBContext();
-        public void Add(EquipmentModel equipment)
+        public void Add(Equipment equipment)
         {
 
             //Verifico equipment_model_id
@@ -40,7 +40,7 @@ namespace forestTrack.Data
         }
 
 
-        public List<EquipmentModel> Get()
+        public List<Equipment> Get()
         {
             return _context.Equipments.ToList();
         }

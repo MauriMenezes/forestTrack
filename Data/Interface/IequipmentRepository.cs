@@ -7,8 +7,8 @@ namespace forestTrack.Models
 {
     public interface IequipmentRepository
     {
-        void Add(EquipmentModel equipment);
-        List<EquipmentModel> Get();
+        void Add(Equipment equipment);
+        List<Equipment> Get();
         void Remove(int equipmentId);
     }
 }
