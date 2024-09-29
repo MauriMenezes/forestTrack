@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace forestTrack.Models
 {
+     [Table("equipment_model")]
     public class EquipmentModel
     {
         [Key]
@@ -14,6 +15,8 @@ namespace forestTrack.Models
         public int Id { get; set; }
         [Column("name")]  
         public string? Name { get; set; }
+
+        public EquipmentModel(){}
 
         public EquipmentModel (int Id,String Name)
         {

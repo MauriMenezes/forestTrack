@@ -12,7 +12,8 @@ namespace forestTrack.Data.repository
         private readonly ChallengeDBContext _context = new ChallengeDBContext();
         public void Add(EquipmentModel equipmentModel)
         {
-            throw new NotImplementedException();
+           _context.equipment_model.Add(equipmentModel);
+            _context.SaveChanges();
         }
 
         public List<EquipmentModel> Get()

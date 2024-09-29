@@ -25,7 +25,6 @@ namespace forestTrack.Controllers
         {
             var equipment = new Equipment
             {
-                
                 EquipmentModelId = equipmentView.Equipment_model_id,
                 Name = equipmentView.Name
             };
