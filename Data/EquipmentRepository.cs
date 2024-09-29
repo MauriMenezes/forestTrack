@@ -13,7 +13,7 @@ namespace forestTrack.Data
         {
             _context.Equipments.Add(equipment);
             _context.SaveChanges();
-        }
+        } 
 
         public List<EquipmentModel> Get()
         {

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("forestTrack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee7fd170cbdd1f399cff221c2095da836fae9516")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4820b41970520a44eb06528042b26ce78189a09")]
 [assembly: System.Reflection.AssemblyProductAttribute("forestTrack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("forestTrack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
