@@ -7,7 +7,9 @@ namespace forestTrack.ViewModel
 {
     public class EquipmentViewModel
     {
-        public int equipment_model_id { get; set; }
-        public string? name { get; set; }
+        public int Equipment_model_id { get; set; }
+
+        required
+        public string Name { get; set; }
     }
 }

@@ -22,11 +22,11 @@ namespace forestTrack.Models
 
         public EquipmentModel() { }
 
-        public EquipmentModel(int id, int equipmentModelId, string name)
+        public EquipmentModel(int Id, int EquipmentModelId, string Name)
         {
-            Id = id;
-            EquipmentModelId = equipmentModelId;
-            Name = name;
+            this.Id = Id;
+            this.EquipmentModelId = EquipmentModelId;
+            this.Name = Name;
         }
     }
 }

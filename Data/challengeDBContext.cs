@@ -17,6 +17,11 @@ namespace forestTrack.Data
           "Server=localhost;database=root;user=sa;password=root@123;encrypt=true;trustServerCertificate=true;"
 
         );
+
+        internal object Find(int equipmentId)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     

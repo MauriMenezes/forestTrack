@@ -9,5 +9,6 @@ namespace forestTrack.Models
     {
         void Add(EquipmentModel equipment);
         List<EquipmentModel> Get();
+        void Remove(int equipmentId);
     }
 }

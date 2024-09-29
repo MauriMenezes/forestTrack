@@ -23,22 +23,45 @@ namespace forestTrack.Controllers
         [HttpPost]
         public IActionResult Add(EquipmentViewModel equipmentView)
         {
-         
+        
+
             var equipment = new EquipmentModel
             {
-                EquipmentModelId = equipmentView.equipment_model_id,
-                Name = equipmentView.name
+                
+                EquipmentModelId = equipmentView.Equipment_model_id,
+                Name = equipmentView.Name
             };
 
             _equipmentRepository.Add(equipment);
             return CreatedAtAction(nameof(Get), new { id = equipment.Id }, equipment);
         }
 
+
+        // get todos os Equipamentos//
         [HttpGet]
         public IActionResult Get()
         {
             var equipments = _equipmentRepository.Get();
             return Ok(equipments);
         }
+        ////// delete ///////
+          [HttpDelete("{id}")]
+        public IActionResult RemoveEquipment(int id)
+        {
+            try
+            {
+                _equipmentRepository.Remove(id);
+                return Ok(new { message = "Deletado com sucesso!" });
+            }
+            catch (InvalidOperationException ex)
+            {
+                return NotFound(new { message = "Equipamento não existe!" }); // Retorna 404 Not Found se não encontrar o equipamento
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message); // Retorna 400 Bad Request para outros erros
+            }
+        }
+
     }
 }
