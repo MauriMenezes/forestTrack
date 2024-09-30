@@ -16,6 +16,8 @@ builder.Services.AddTransient<IequipmentRepository,EquipmentRepository>();
 builder.Services.AddTransient<IEquipmentStateRepository, EquipmentStateRepository>(); 
 builder.Services.AddTransient<IEquipmentModelRepository, EquipmentModelRepository>(); 
 builder.Services.AddTransient<IEquipmentMSHERepository,EquipmentMSHERepository>(); 
+builder.Services.AddTransient<IEquipmentPositionHistory,EquipmentPositionHistoryRepository>(); 
+
 
 var app = builder.Build();
 

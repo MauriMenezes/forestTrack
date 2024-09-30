@@ -14,6 +14,7 @@ namespace forestTrack.Data
         public DbSet<EquipmentState> equipment_state { get; set; }
         public DbSet<EquipmentModel> equipment_model { get; set; }
         public DbSet<EquipmentMSHE> equipment_model_state_hourly_earnings { get; set; }
+         public DbSet<EquipmentPositionHistory> equipment_position_history { get; set; }
 
 
 
