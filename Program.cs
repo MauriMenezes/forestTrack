@@ -12,14 +12,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
 builder.Services.AddTransient<IequipmentRepository,EquipmentRepository>();
 builder.Services.AddTransient<IEquipmentStateRepository, EquipmentStateRepository>(); 
-
 builder.Services.AddTransient<IEquipmentModelRepository, EquipmentModelRepository>(); 
-
-
-
+builder.Services.AddTransient<IEquipmentMSHERepository,EquipmentMSHERepository>(); 
 
 var app = builder.Build();
 
