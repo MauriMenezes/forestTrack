@@ -46,7 +46,6 @@ namespace forestTrack.Data
         {
             return _context.Equipments.ToList();
         }
-
         // remove Equipmet
         public void Remove(int equipmentId)
         {

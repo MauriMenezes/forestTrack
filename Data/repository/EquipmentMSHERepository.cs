@@ -46,7 +46,6 @@ namespace forestTrack.Data.repository
         public void Remove(int equipmentModelId)
         {
             var equipment = _context.Equipments.Find(equipmentModelId);
-
             if (equipment == null)
             {
                 throw new InvalidOperationException("Equipment not found.");

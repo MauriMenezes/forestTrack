@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using forestTrack.Data.Interface;
 using forestTrack.Models; // Certifique-se de que você tem a referência correta para o seu modelo
+using forestTrack.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
 namespace forestTrack.Controllers
@@ -16,7 +17,7 @@ namespace forestTrack.Controllers
         {
             _equipmentStateRepository = equipmentStateRepository ?? throw new ArgumentNullException(nameof(equipmentStateRepository));
         }
-
+       
         [HttpGet]
         public IActionResult Get()
         {
