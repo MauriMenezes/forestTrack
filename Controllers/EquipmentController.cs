@@ -54,7 +54,7 @@ namespace forestTrack.Controllers
             }
             catch (InvalidOperationException ex)
             {
-                return NotFound(new { message = "Equipamento não existe!" }); // Retorna 404 Not Found se não encontrar o equipamento
+                return NotFound(new { message = "Equipamento não existe!" });
             }
             catch (Exception ex)
             {

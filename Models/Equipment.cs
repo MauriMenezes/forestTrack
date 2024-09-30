@@ -20,6 +20,7 @@ namespace forestTrack.Models
         [Column("name")]  
         public string? Name { get; set; }
 
+
         public Equipment() { }
 
         public Equipment(int Id, int EquipmentModelId, string Name)
